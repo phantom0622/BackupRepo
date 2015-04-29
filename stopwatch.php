@@ -25,16 +25,17 @@ def clickstop():
     timer.stop()
     if msecond==0 :
         get=get+1
-    else:
-        miss=miss+1
+    miss=miss+1
     
 def clickreset():
-    global message,msecond,second,minute
+    global message,msecond,second,minute,miss,get
     message = "Reset!"
     timer.stop()
     msecond=0
     second=0
     minute=0
+    miss=0
+    get=0
 
 # Handler to draw on canvas
 def draw(canvas):
