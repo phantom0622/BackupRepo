@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TabViewActionBarExample</string>
+
+
+    <string name="title_section1">運動</string>
+    <string name="title_section2">趨勢</string>
+    <string name="title_section3">其他</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <string name="action_settings">Settings</string>
+</resources>
