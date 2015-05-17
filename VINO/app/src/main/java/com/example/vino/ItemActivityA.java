@@ -6,47 +6,55 @@ import android.content.res.Resources;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTabHost;
+import android.support.v4.view.ViewPager;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TabHost;
+import android.widget.ViewFlipper;
+
 
 /**
  * Created by peter on 2015/5/10.
  */
-public class ItemActivityA extends Fragment {
+
+public class ItemActivityA extends Fragment  {
 
     private FragmentTabHost mTabHost;
+    private ViewPager mViewPager;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
 
         mTabHost = new FragmentTabHost(getActivity());
         mTabHost.setup(getActivity(), getChildFragmentManager(), R.layout.acitvity_itema);
 
         Bundle arg1 = new Bundle();
         arg1.putInt("Arg for Frag1", 1);
-        mTabHost.addTab(mTabHost.newTabSpec("Tab1").setIndicator("Frag Tab1"),
+        mTabHost.addTab(mTabHost.newTabSpec("Tab1").setIndicator("Steps"),
                 NestedFragment1.class, arg1);
 
         Bundle arg2 = new Bundle();
         arg2.putInt("Arg for Frag2", 2);
-        mTabHost.addTab(mTabHost.newTabSpec("Tab2").setIndicator("Frag Tab2"),
+        mTabHost.addTab(mTabHost.newTabSpec("Tab2").setIndicator("Sleep"),
                 NestedFragment2.class, arg2);
 
-        Bundle arg3 = new Bundle();
+     /* Bundle arg3 = new Bundle();
         arg2.putInt("Arg for Frag3", 3);
         mTabHost.addTab(mTabHost.newTabSpec("Tab3").setIndicator("Frag Tab3"),
-                NestedFragment3.class, arg3);
+                NestedFragment3.class, arg3);*/
 
         return mTabHost;
+
+
     }
+
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         mTabHost = null;
     }
-
 }
