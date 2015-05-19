@@ -1,17 +1,12 @@
 package com.example.vino;
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.res.Resources;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTabHost;
-import android.support.v4.view.ViewPager;
-import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ViewFlipper;
+
 
 
 /**
@@ -21,14 +16,13 @@ import android.widget.ViewFlipper;
 public class ItemActivityA extends Fragment  {
 
     private FragmentTabHost mTabHost;
-    private ViewPager mViewPager;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
 
-        mTabHost = new FragmentTabHost(getActivity());
+       mTabHost = new FragmentTabHost(getActivity());
         mTabHost.setup(getActivity(), getChildFragmentManager(), R.layout.acitvity_itema);
 
         Bundle arg1 = new Bundle();
@@ -41,7 +35,7 @@ public class ItemActivityA extends Fragment  {
         mTabHost.addTab(mTabHost.newTabSpec("Tab2").setIndicator("Sleep"),
                 NestedFragment2.class, arg2);
 
-     /* Bundle arg3 = new Bundle();
+    /*  Bundle arg3 = new Bundle();
         arg2.putInt("Arg for Frag3", 3);
         mTabHost.addTab(mTabHost.newTabSpec("Tab3").setIndicator("Frag Tab3"),
                 NestedFragment3.class, arg3);*/
@@ -49,7 +43,10 @@ public class ItemActivityA extends Fragment  {
         return mTabHost;
 
 
+
+
     }
+
 
 
     @Override

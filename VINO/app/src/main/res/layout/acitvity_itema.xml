@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
 <!--
+
     <TabHost
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/tabHost"
-        android:layout_gravity="center_horizontal">
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true">
 
         <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"></TabWidget>
 
             <FrameLayout
                 android:id="@android:id/tabcontent"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:id="@+id/tab1"
@@ -37,20 +35,22 @@
                     android:layout_height="fill_parent"
                     android:orientation="vertical"></LinearLayout>
 
-                <LinearLayout
+               <LinearLayout
                     android:id="@+id/tab3"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:orientation="vertical"></LinearLayout>
 
             </FrameLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TabWidget>
         </LinearLayout>
     </TabHost>
- -->
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+
+-->
 
 
 </LinearLayout>
