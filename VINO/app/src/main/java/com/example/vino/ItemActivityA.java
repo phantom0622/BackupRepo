@@ -1,12 +1,13 @@
 package com.example.vino;
 
+import android.content.IntentSender;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTabHost;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 
 
 /**
@@ -17,12 +18,14 @@ public class ItemActivityA extends Fragment  {
 
     private FragmentTabHost mTabHost;
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
 
-       mTabHost = new FragmentTabHost(getActivity());
+        mTabHost = new FragmentTabHost(getActivity());
         mTabHost.setup(getActivity(), getChildFragmentManager(), R.layout.acitvity_itema);
 
         Bundle arg1 = new Bundle();
@@ -35,6 +38,8 @@ public class ItemActivityA extends Fragment  {
         mTabHost.addTab(mTabHost.newTabSpec("Tab2").setIndicator("Sleep"),
                 NestedFragment2.class, arg2);
 
+
+
     /*  Bundle arg3 = new Bundle();
         arg2.putInt("Arg for Frag3", 3);
         mTabHost.addTab(mTabHost.newTabSpec("Tab3").setIndicator("Frag Tab3"),
@@ -42,16 +47,16 @@ public class ItemActivityA extends Fragment  {
 
         return mTabHost;
 
-
-
-
     }
-
 
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        mTabHost = null;
+       // mTabHost = null;
     }
+
+
+
+
 }

@@ -30,9 +30,14 @@ public class SelectDeviceActivity extends ActionBarActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id){
                 Toast.makeText(getApplicationContext(), "你選擇的是" + list[position], Toast.LENGTH_SHORT).show();
-                if(position==2){
+                if(position==2 || position== 1 ){
+
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("select", position);
                     Intent intent = new Intent();
                     intent.setClass(SelectDeviceActivity.this, MainActivity.class);
+                    //將Bundle物件assign給intent
+                    intent.putExtras(bundle);
                     startActivity(intent);
                     finish();
                 }

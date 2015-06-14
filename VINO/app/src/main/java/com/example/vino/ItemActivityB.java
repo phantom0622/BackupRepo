@@ -31,6 +31,8 @@ public class ItemActivityB extends Fragment {
         prepareListData();
         listAdapter = new ExpandableListAdapter(this.getActivity(), listDataHeader, listDataChild);
 
+
+
         // setting list adapter
         expListView.setAdapter(listAdapter);
 
@@ -87,6 +89,11 @@ public class ItemActivityB extends Fragment {
                 return false;
             }
         });
+
+        //expand all header
+        for (int i = 0; i < listDataHeader.size(); i++) {
+            expListView.expandGroup(i);
+        }
 
         return rootView;
     }
